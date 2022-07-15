@@ -120,16 +120,19 @@ This notebook will ask you to implement these functions from scratch in `numpy`.
 
 Although programming frameworks make convolutions easy to use, they remain one of the hardest concepts to understand in Deep Learning. A convolution layer transforms an input volume into an output volume of different size, as shown below. 
 
-<img src="images/conv_nn.png" style="width:350px;height:200px;">
+<img width="475" alt="conv_nn" src="https://user-images.githubusercontent.com/85833803/179236031-c5b02f62-bcc5-4373-8fd9-d0ac9026694b.png" style="width:350px;height:200px;">
+
 
 In this part, you will build every step of the convolution layer. You will first implement two helper functions: one for zero padding and the other for computing the convolution function itself. 
+
 
 <a name='3-1'></a>
 ### 3.1 - Zero-Padding
 
 Zero-padding adds zeros around the border of an image:
 
-<img src="images/PAD.png" style="width:600px;height:400px;">
+
+<img width="574" alt="PAD" src="https://user-images.githubusercontent.com/85833803/179236528-ab7fa947-2a08-49cc-b94e-d375b4d7780e.png" style="width:600px;height:400px;">
 <caption><center> <u> <font color='purple'> <b>Figure 1</b> </u><font color='purple'>  : <b>Zero-Padding</b><br> Image (3 channels, RGB) with a padding of 2. </center></caption>
 
 The main benefits of padding are:
@@ -232,7 +235,7 @@ zero_pad_test(zero_pad)
 
 
 
-![png](output_8_1.png)
+![output](https://user-images.githubusercontent.com/85833803/179236870-8e589a7a-15cf-4abc-a180-b2f03b141ec2.png)
 
 
 <a name='3-2'></a>
@@ -244,7 +247,7 @@ In this part, implement a single step of convolution, in which you apply the fil
 - Applies a filter at every position of the input
 - Outputs another volume (usually of different size)
 
-<img src="images/Convolution_schematic.gif" style="width:500px;height:300px;">
+<img src="https://user-images.githubusercontent.com/85833803/179237172-6c764959-5d72-47d0-8d1e-5fa70e29b041.gif" style="width:500px;height:300px;">
 <caption><center> <u> <font color='purple'> <b>Figure 2</b> </u><font color='purple'>  : <b>Convolution operation</b><br> with a filter of 3x3 and a stride of 1 (stride = amount you move the window each time you slide) </center></caption>
 
 In a computer vision application, each value in the matrix on the left corresponds to a single pixel value. You convolve a 3x3 filter with the image by multiplying its values element-wise with the original matrix, then summing them up and adding a bias. In this first step of the exercise, you will implement a single step of convolution, corresponding to applying a filter to just one of the positions to get a single real-valued output. 
@@ -320,7 +323,7 @@ assert np.isclose(Z, -6.999089450680221), "Wrong value"
 In the forward pass, you will take many filters and convolve them on the input. Each 'convolution' gives you a 2D matrix output. You will then stack these outputs to get a 3D volume: 
 
 <center>
-<video width="620" height="440" src="images/conv_kiank.mp4" type="video/mp4" controls>
+<video width="620" height="440" src="https://user-images.githubusercontent.com/85833803/179237611-5f7617f9-35c4-4bc5-94de-2a87367a2bd9.mp4" type="video/mp4" controls>
 </video>
 </center>
 
@@ -344,7 +347,8 @@ This will be useful when you will define `a_slice_prev` below, using the `start/
 
 2. To define a_slice you will need to first define its corners `vert_start`, `vert_end`, `horiz_start` and `horiz_end`. This figure may be helpful for you to find out how each of the corners can be defined using h, w, f and s in the code below.
 
-<img src="images/vert_horiz_kiank.png" style="width:400px;height:300px;">
+<img src="https://user-images.githubusercontent.com/85833803/179237947-a1e108a0-8247-4eb2-980a-dd5974f73481.png" style="width:400px;height:300px;">
+
 <caption><center> <u> <font color='purple'> <b>Figure 3</b> </u><font color='purple'>  : <b>Definition of a slice using vertical and horizontal start/end (with a 2x2 filter)</b> <br> This figure shows only a single channel.  </center></caption>
 
 
@@ -540,11 +544,11 @@ The pooling (POOL) layer reduces the height and width of the input. It helps red
 
 <table>
 <td>
-<img src="images/max_pool1.png" style="width:500px;height:300px;">
+<img src="https://user-images.githubusercontent.com/85833803/179238543-12057973-7433-42a2-9557-657800292761.png" style="width:500px;height:300px;">
 <td>
 
 <td>
-<img src="images/a_pool.png" style="width:500px;height:300px;">
+<img src="https://user-images.githubusercontent.com/85833803/179238641-baca83d6-8183-4d9d-98a5-657c797e626d.png" style="width:500px;height:300px;">
 <td>
 </table>
 
