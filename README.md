@@ -111,8 +111,7 @@ You will be implementing the building blocks of a convolutional neural network! 
     
 This notebook will ask you to implement these functions from scratch in `numpy`. In the next notebook, you will use the TensorFlow equivalents of these functions to build the following model:
 
-
-<img src="images/model.png" style="width:800px;height:300px;">
+<img width="604" alt="model" src="https://user-images.githubusercontent.com/85833803/179204459-fc941b79-a775-4185-baf1-a09ae8ee6a2f.png" style="width:800px;height:300px;">
 
 **Note**: For every forward function, there is a corresponding backward equivalent. Hence, at every step of your forward module you will store some parameters in a cache. These parameters are used to compute gradients during backpropagation. 
 
